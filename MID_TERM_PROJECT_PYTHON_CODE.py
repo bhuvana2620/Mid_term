@@ -3,6 +3,8 @@ import time
 import random
 import matplotlib.pyplot as plt
 
+#Quick Sort Algorithm
+
 def quick_sort(arr):
     if len(arr) <= 1:
         return arr
@@ -21,6 +23,8 @@ def quick_sort(arr):
             greater.append(x)
 
     return quick_sort(less) + equal + quick_sort(greater)
+
+#Heap Sort Algorithm
 
 def heap_sort(arr):
     def heapify(arr, n, i):
@@ -48,6 +52,9 @@ def heap_sort(arr):
         heapify(arr, i, 0)
     return arr
 
+
+#Merge Sort Algorithm
+
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr
@@ -73,6 +80,8 @@ def merge(left, right):
     result.extend(left[i:])
     result.extend(right[j:])
     return result
+
+#Radix Sort Algorithm
 
 def radix_sort(arr):
     def counting_sort(arr, exp):
@@ -103,6 +112,8 @@ def radix_sort(arr):
         exp *= 10
     return arr
 
+#Bucket Sort Algorithm
+
 def bucket_sort(arr):
     max_num = max(arr)
     min_num = min(arr)
@@ -122,6 +133,7 @@ def bucket_sort(arr):
 
     return sorted_arr
 
+
 def insertion_sort(arr, start, end):
     for i in range(start + 1, end + 1):
         key = arr[i]
@@ -131,6 +143,8 @@ def insertion_sort(arr, start, end):
             j -= 1
         arr[j + 1] = key
     return arr
+
+#Tim Sort Algorithm
 
 def timsort(arr):
     min_run = 32
